@@ -1,20 +1,27 @@
-const express = require("express");
-const router = express.Router();
+const router = require("express").Router();
 
-router.get("/", (req, res) => {
-   res.json({ message: "get products" });
-});
+router
+   .route("/")
+   .get((req, res) => {
+      res.json({ message: "get products" });
+   })
+   .post((req, res) => {
+      res.json({ message: "post products" });
+   });
 
-router.post("/", (req, res) => {});
-
-router.get("/:id", (req, res) => {
-   const { id } = req.params;
-});
-router.patch("/:id", (req, res) => {
-   const { id } = req.params;
-});
-router.delete("/:id", (req, res) => {
-   const { id } = req.params;
-});
+router
+   .route("/:id")
+   .get((req, res) => {
+      const { id } = req.params;
+      res.json({ message: "get products/:id" });
+   })
+   .patch((req, res) => {
+      const { id } = req.params;
+      res.json({ message: "patch products/:id" });
+   })
+   .delete((req, res) => {
+      const { id } = req.params;
+      res.json({ message: "delete products/:id" });
+   });
 
 module.exports = router;

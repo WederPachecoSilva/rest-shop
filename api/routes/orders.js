@@ -1,15 +1,19 @@
 const router = require("express").Router();
 
-router.get("/", (req, res) => {});
+router
+   .route("/")
+   .get((req, res) => {
+      res.json({ message: "get orders" });
+   })
+   .post((req, res) => {});
 
-router.post("/", (req, res) => {});
-
-router.get("/:id", (req, res) => {
-   const { id } = req.params;
-});
-
-router.delete("/:id", (req, res) => {
-   const { id } = req.params;
-});
+router
+   .route("/:id")
+   .get((req, res) => {
+      const { id } = req.params;
+   })
+   .delete((req, res) => {
+      const { id } = req.params;
+   });
 
 module.exports = router;
