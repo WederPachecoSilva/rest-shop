@@ -1,0 +1,1 @@
+{"version":3,"file":"server.js","sourceRoot":"/home/weder/Projetos/node-rest/src/","sources":["server.ts"],"names":[],"mappings":";;AAAA,6BAA6B;AAC7B,+BAAwB;AAExB,MAAM,IAAI,GAAG,OAAO,CAAC,GAAG,CAAC,IAAI,IAAI,IAAI,CAAC;AAEtC,MAAM,MAAM,GAAG,IAAI,CAAC,YAAY,CAAC,aAAG,CAAC,CAAC;AAEtC,MAAM,CAAC,MAAM,CAAC,IAAI,EAAE,GAAG,EAAE,CAAC,OAAO,CAAC,GAAG,CAAC,SAAS,CAAC,CAAC,CAAC"}

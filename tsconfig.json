@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "pretty": true,
+        "sourceRoot": "./src",
+        "module": "CommonJS",
+        "removeComments": true,
+        "outDir": "./build",
+        "sourceMap": true,
+        "target": "es2015",
+        "moduleResolution": "node",
+
+        /* Additional Checks */
+        "noUnusedLocals": true,
+        "noUnusedParameters": false,
+        "noImplicitReturns": true,
+        "noFallthroughCasesInSwitch": true
+    },
+    "exclude": ["node_modules"]
+}
