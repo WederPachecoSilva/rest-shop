@@ -1,35 +1,33 @@
-import { Router } from "express";
+import { Router, Response, Request } from 'express';
 
-const router = Router();
-router
-    .route("/")
-    .get((req, res) => {
-        res.json({ message: "get products" });
+export const productsRouter = Router();
+productsRouter
+    .route('/')
+    .get((req: Request, res: Response) => {
+        res.json({ message: 'get products' });
     })
-    .post((req, res) => {
+    .post((req: Request, res: Response) => {
         const product = {
             name: req.body.name,
             price: req.body.price
         };
         res.status(201).json({
-            message: "Handling PORT requests to /products",
+            message: 'Handling PORT requests to /products',
             createdProduct: product
         });
     });
 
-router
-    .route("/:id")
-    .get((req, res) => {
+productsRouter
+    .route('/:id')
+    .get((req: Request, res: Response) => {
         const { id } = req.params;
-        res.json({ message: "get products/:id" });
+        res.json({ message: 'get products/:id' });
     })
-    .patch((req, res) => {
+    .patch((req: Request, res: Response) => {
         const { id } = req.params;
-        res.json({ message: "patch products/:id" });
+        res.json({ message: 'patch products/:id' });
     })
-    .delete((req, res) => {
+    .delete((req: Request, res: Response) => {
         const { id } = req.params;
-        res.json({ message: "delete products/:id" });
+        res.json({ message: 'delete products/:id' });
     });
-
-export default router;

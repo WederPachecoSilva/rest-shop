@@ -9,14 +9,16 @@
     "author": "Wéder Pacheco",
     "license": "MIT",
     "dependencies": {
-        "@types/body-parser": "^1.16.8",
-        "@types/express": "^4.0.39",
-        "@types/node": "^8.0.57",
         "body-parser": "^1.18.2",
         "express": "^4.16.2"
     },
     "devDependencies": {
+        "@types/body-parser": "^1.16.8",
+        "@types/express": "^4.0.39",
+        "@types/node": "^8.0.57",
+        "@types/morgan": "^1.7.35",
         "morgan": "^1.9.0",
+        "tslint": "^5.8.0",
         "typescript": "^2.6.2"
     }
 }
