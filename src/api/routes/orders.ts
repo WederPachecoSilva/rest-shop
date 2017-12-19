@@ -23,8 +23,8 @@ ordersRouter
 ordersRouter
   .route("/:id")
   .get((req: Request, res: Response) => {
-    const { id } = req.params;
+    // const { id } = req.params;
   })
   .delete((req, res) => {
-    const { id } = req.params;
+    // const { id } = req.params;
   });

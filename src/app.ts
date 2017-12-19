@@ -1,5 +1,6 @@
 import * as bodyParser from "body-parser";
 import * as express from "express";
+import * as mongoose from "mongoose";
 import * as morgan from "morgan";
 
 import { NextFunction, Request, Response } from "express";
@@ -23,10 +24,15 @@ app.use((req: Request, res: Response, next: NextFunction) => {
     return res.status(200).json({});
   }
   next();
+  return 0;
 });
 
 app.use("/products", productsRouter);
 app.use("/orders", ordersRouter);
+
+mongoose.connect("mongodb://localhost:27017/node-rest", {
+  useMongoClient: true
+});
 
 app.use((req: Request, res: Response, next: NextFunction) => {
   const error = new Error("Not found");
